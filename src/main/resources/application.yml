@@ -1,0 +1,18 @@
+server:
+  port: 8080
+  http2:
+    enabled: true
+  servlet:
+    context-path: /backend
+  forward-headers-strategy: native
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/libra
+    username: root
+    password: root
+mybatis-plus:
+  mapper-locations: classpath*:com/skye/libra/**/mapping/*.xml
+  type-aliases-package: com.skye.libra.**.dao
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
