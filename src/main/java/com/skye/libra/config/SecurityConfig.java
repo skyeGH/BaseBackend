@@ -25,6 +25,7 @@ public class SecurityConfig {
 		http
 				.authorizeHttpRequests((authorize) -> authorize
 						.antMatchers("/test/**").permitAll()
+						.antMatchers("/ghMenu/**").permitAll()
 						.anyRequest().authenticated()
 				)
 				.formLogin(Customizer.withDefaults())
